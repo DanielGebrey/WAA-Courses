@@ -12,7 +12,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import Lab1.Lab1.repo.PostRepo;
 
 @SpringBootApplication
-@EntityScan(basePackages = "Lab1.Lab1.entities")
 public class Lab1Application {
 	@Autowired
 	private PostRepo postRepo;
