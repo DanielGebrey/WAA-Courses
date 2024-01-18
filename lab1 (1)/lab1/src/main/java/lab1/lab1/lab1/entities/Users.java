@@ -24,7 +24,6 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     String name;
-    @OneToMany
-    @JoinColumn(name = "user_id")
+    @OneToMany(mappedBy = "user")
     List<Post> posts;
 }
