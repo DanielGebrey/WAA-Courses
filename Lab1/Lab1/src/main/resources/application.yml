@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: spring-data-demo-1
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/lab2  # MySQL connection URL
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update  # Use 'update' to update the schema without dropping existing tables
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect  # MySQL dialect
+        format_sql: false
+    show-sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+  sql:
+     init:
+      mode: always
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/post
+server:
+  port: 8080

@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 import Lab1.Lab1.entities.Post;
 import Lab1.Lab1.entities.dto.respond.PostDTO;
 import Lab1.Lab1.service.PostService;
-import Lab1.Lab1.service.impl.PostServiceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,9 +39,10 @@ public class PostController {
         postService.create(post);
     }
 
-    @PutMapping
-    public void update(@RequestBody PostDTO post) {
-        postService.update(post);
+    @PutMapping("/{postId}")
+    public ResponseEntity<PostDTO> updatePost(@PathVariable Long postId, @RequestBody PostDTO updatedPost) {
+        PostDTO updated = postService.updatePost(postId, updatedPost);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")

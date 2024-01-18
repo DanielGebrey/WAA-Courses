@@ -36,9 +36,12 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public PostDTO update(PostDTO postDTO) {
+    public PostDTO updatePost(Long id, PostDTO postDTO) {
         Post post = modelMapper.map(postDTO, Post.class);
-        return modelMapper.map(postRepo.save(post), PostDTO.class);
+        post.setId(id);
+        postRepo.save(post);
+        return modelMapper.map(post, PostDTO.class);
+
     }
 
     @Override
