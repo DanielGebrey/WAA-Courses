@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LabApplication",
+            "request": "launch",
+            "mainClass": "lab.LabApplication",
+            "projectName": "spring-data-1"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Lab1Application<lab1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "lab1.lab1.lab1.Lab1Application",
+            "projectName": "lab1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Lab1Application<spring-data-1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "lab.Lab1Application",
+            "projectName": "spring-data-1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=58482 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=spring-data-1"
+        }
+    ]
+}
