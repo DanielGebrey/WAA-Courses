@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,7 @@ public class ExceptionTimeAspect {
     public void ExceptionTime() {
     }
 
-    @AfterThrowing("@annotation(lab.annotation.ExceptionTime)")
+    @After("@annotation(lab.annotation.ExceptionTime)")
     public void logAfterByAnnotation(JoinPoint joinPoint) {
         System.out.println("Log after the method" + joinPoint.getSignature().getName() + " tooks ");
 
