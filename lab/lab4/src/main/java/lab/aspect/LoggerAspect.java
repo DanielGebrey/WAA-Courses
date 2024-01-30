@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -30,4 +31,10 @@ public class LoggerAspect {
         log.setTime(LocalDateTime.now());
         logRepository.save(log);
     }
+
+    @After("execution(* lab..*.*(..))")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Log after the method " + joinPoint.getSignature().getName());
+    }
+    
 }
