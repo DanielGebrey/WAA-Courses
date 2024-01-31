@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Content {
+  width: 150px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.Content:hover,
+.Content:active {
+  background-color: #C0DDF5;
+}
+
+.Field {
+  margin: 16px 0;
+  color: #ccc;
+}
+
+.PostDetails {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  /* Set the width as needed */
+  height: 100vh;
+  /* Set the height as needed */
+  background-color: #f0f0f0;
+  /* Set the background color as needed */
+  padding: 20px;
+  /* Set the padding as needed */
+}
+
+.Change {
+  position: fixed;
+  right: 700px;
+  /* Adjust the right spacing as needed */
+  top: 500px;
+  /* Adjust the top spacing as needed */
+  width: 200px;
+  background-color: #3498db;
+  /* Set the background color as needed */
+  color: #fff;
+  /* Set the text color as needed */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow for depth */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.Change:hover {
+  background-color: #2980b9;
+  /* Change color on hover */
+}
