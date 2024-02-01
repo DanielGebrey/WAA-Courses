@@ -8,6 +8,7 @@ const Dashboard = () => {
 
   const loadPost = async () => {
     await fetchService.get('posts').then(data => setPosts(data));
+    await fetchService.remove('posts').then(data => setPosts(data));
   }
   useEffect(() => { loadPost() }, [])
   return (
