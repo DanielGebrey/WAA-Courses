@@ -1,5 +1,7 @@
 package lab.entities;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3003")
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
